@@ -1,58 +1,74 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        qiita-to
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+  <div class="container">
+    <div class="top"></div>
+    <header>
+      <app-header></app-header>
+    </header>
+    <aside class="left">menu</aside>
+    <main>trend</main>
+    <aside class="right">
+      <div>advent calandar</div>
+      <div>user ranking</div>
+      <div>tag ranking</div>
+    </aside>
+    <footer></footer>
+  </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import AppHeader from '~/components/Header.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    AppHeader
   }
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style scoped>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 280px minmax(auto, 600px) 280px 1fr;
+    grid-template-rows: 41px 1fr 220px;
+  }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  header {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  div.top {
+    grid-row: 1 / 2;
+    grid-column: 1 / 6;
 
-.links {
-  padding-top: 15px;
-}
+    background-color: white;
+  }
+
+  aside.left {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  main {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+  }
+
+  aside.right {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+  }
+
+  footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 6;
+  }
+
+  aside.left, aside.right, main, footer {
+    padding: 10px;
+    background-color: #bbbbbb;
+    border: 5px solid #444444;
+  }
 </style>

@@ -13,6 +13,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    'assets/css/main.css'
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -34,5 +37,8 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  modules: [
+    '@nuxtjs/font-awesome'
+  ]
 }
