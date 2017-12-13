@@ -18,13 +18,11 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import AppHeader from '~/components/Header.vue'
 import AppTimeLine from '~/components/TimeLine.vue'
 
 export default {
   components: {
-    Logo,
     AppHeader,
     AppTimeLine
   }
