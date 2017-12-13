@@ -5,7 +5,9 @@
       <app-header></app-header>
     </header>
     <aside class="left">menu</aside>
-    <main>trend</main>
+    <main>
+      <app-time-line></app-time-line>
+    </main>
     <aside class="right">
       <div>advent calandar</div>
       <div>user ranking</div>
@@ -18,17 +20,19 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import AppHeader from '~/components/Header.vue'
+import AppTimeLine from '~/components/TimeLine.vue'
 
 export default {
   components: {
     Logo,
-    AppHeader
+    AppHeader,
+    AppTimeLine
   }
 }
 </script>
 
 <style scoped>
-  .container {
+  div.container {
     display: grid;
     grid-template-columns: 1fr 280px minmax(auto, 600px) 280px 1fr;
     grid-template-rows: 41px 1fr 220px;
@@ -66,7 +70,7 @@ export default {
     grid-column: 1 / 6;
   }
 
-  aside.left, aside.right, main, footer {
+  aside.left, aside.right, footer {
     padding: 10px;
     background-color: #bbbbbb;
     border: 5px solid #444444;
