@@ -2,7 +2,7 @@
   <div class="article-item">
     <div class="left">
       <a :href="'https://qiita.com/' + item.user.id">
-        <img class="avatar" :src="item.user.profile_image_url">        
+        <img class="avatar" :src="item.user.profile_image_url">
       </a>
     </div>
     <div class="right">
@@ -49,7 +49,6 @@ export default {
 <style scoped lang="scss">
 .article-item {
   display: flex;
-  margin: 15px 0;
   background-color: white;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: 3px;

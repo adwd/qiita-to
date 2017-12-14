@@ -2,8 +2,6 @@
   <div class="container">
     <div class="left">
       <span class="qiita">Qiita</span>
-      <!-- <span>home</span>
-      <span>community</span> -->
     </div>
 
     <div class="center">

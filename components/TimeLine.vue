@@ -30,6 +30,7 @@ export default {
 </script>
 
 <style scoped>
-div.timeline-container {
+.article-item + .article-item {
+  margin-top: 15px;
 }
 </style>

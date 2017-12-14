@@ -4,7 +4,9 @@
     <header>
       <app-header></app-header>
     </header>
-    <aside class="left">menu</aside>
+    <aside class="left">
+      <app-profile-card></app-profile-card>
+    </aside>
     <main>
       <app-time-line></app-time-line>
     </main>
@@ -20,11 +22,13 @@
 <script>
 import AppHeader from '~/components/Header.vue'
 import AppTimeLine from '~/components/TimeLine.vue'
+import AppProfileCard from '~/components/ProfileCard.vue'
 
 export default {
   components: {
     AppHeader,
-    AppTimeLine
+    AppTimeLine,
+    AppProfileCard
   }
 }
 </script>
@@ -74,7 +78,6 @@ footer {
   grid-column: 1 / 6;
 }
 
-aside.left,
 aside.right,
 footer {
   background-color: #bbbbbb;
