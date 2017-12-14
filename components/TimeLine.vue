@@ -1,19 +1,20 @@
 <template>
   <div class="timeline-container">
-    <ul class="items">
-      <li v-for="(item, index) in items"
-          v-bind:key="item.id"
-          v-bind:title="item.title">
-        {{ item.title }}
-      </li>
-    </ul>
+    <article-item v-for="(item, index) in items"
+        :key="item.id"
+        :item="item">
+    </article-item>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import ArticleItem from '~/components/ArticleItem.vue'
 
 export default {
+  components: {
+    ArticleItem
+  },
   data: function () {
     return {
       items: []
@@ -30,9 +31,5 @@ export default {
 
 <style scoped>
 div.timeline-container {
-  background-color: white;
-}
-
-ul.items {
 }
 </style>
