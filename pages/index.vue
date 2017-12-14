@@ -6,6 +6,7 @@
     </header>
     <aside class="left">
       <app-profile-card></app-profile-card>
+      <hot-tags></hot-tags>
     </aside>
     <main>
       <app-time-line></app-time-line>
@@ -23,12 +24,14 @@
 import AppHeader from '~/components/Header.vue'
 import AppTimeLine from '~/components/TimeLine.vue'
 import AppProfileCard from '~/components/ProfileCard.vue'
+import HotTags from '~/components/HotTags.vue'
 
 export default {
   components: {
     AppHeader,
     AppTimeLine,
-    AppProfileCard
+    AppProfileCard,
+    HotTags
   }
 }
 </script>
