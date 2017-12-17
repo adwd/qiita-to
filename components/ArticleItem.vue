@@ -1,5 +1,5 @@
 <template>
-  <div class="article-item">
+  <card class="article-item">
     <div class="left">
       <a :href="'https://qiita.com/' + item.user.id">
         <img class="avatar" :src="item.user.profile_image_url">
@@ -24,11 +24,15 @@
         </div>
       </a>
     </div>
-  </div>
+  </card>
 </template>
 
 <script>
+import Card from '~/components/parts/card'
 export default {
+  components: {
+    Card
+  },
   props: {
     item: Object
   },
@@ -48,10 +52,6 @@ export default {
 
 <style scoped lang="scss">
 .article-item {
-  display: flex;
-  background-color: white;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
   padding: 8px;
 }
 

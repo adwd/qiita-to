@@ -51,7 +51,7 @@ header {
 main,
 aside.left,
 aside.right {
-  padding: 20px;
+  padding: 15px;
 }
 
 div.top {
