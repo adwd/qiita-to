@@ -12,7 +12,15 @@
       <app-time-line></app-time-line>
     </main>
     <aside class="right">
-      <div>advent calandar</div>
+      <a class="advent-calendar"
+        href="https://qiita.com/advent-calendar/2017"
+        target="_blank">
+        <card>
+          &lt;Advent Calendar
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          &gt;
+        </card>
+      </a>
       <div>user ranking</div>
       <div>tag ranking</div>
     </aside>
@@ -25,18 +33,20 @@ import AppHeader from '~/components/Header.vue'
 import AppTimeLine from '~/components/TimeLine.vue'
 import AppProfileCard from '~/components/ProfileCard.vue'
 import HotTags from '~/components/HotTags.vue'
+import Card from '~/components/parts/Card.vue'
 
 export default {
   components: {
     AppHeader,
     AppTimeLine,
     AppProfileCard,
-    HotTags
+    HotTags,
+    Card
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 div.container {
   display: grid;
   grid-template-columns: 1fr 280px minmax(auto, 600px) 280px 1fr;
@@ -81,7 +91,23 @@ footer {
   grid-column: 1 / 6;
 }
 
-aside.right,
+a.advent-calendar {
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  card {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 16px 8px;
+  }
+  i.fa-heart {
+    padding: 0 3px;
+    color: red;
+  }
+}
+
 footer {
   background-color: #bbbbbb;
   border: 5px solid #444444;
