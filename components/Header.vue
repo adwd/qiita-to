@@ -58,6 +58,7 @@ span.qiita {
   background-color: #55c500;
   color: white;
   font-size: 22px;
+  font-weight: bold;
 }
 
 i.fa-folder-open-o, i.fa-pencil {

@@ -21,8 +21,8 @@
           &gt;
         </card>
       </a>
-      <div>user ranking</div>
-      <div>tag ranking</div>
+      <!--<div>user ranking</div>-->
+      <!--<div>tag ranking</div>-->
     </aside>
     <footer></footer>
   </div>
