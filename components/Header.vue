@@ -12,13 +12,13 @@
     </div>
 
     <ul class="right">
-      <li>
+      <li class="stock">
         <a href="/stock"><i class="fa fa-folder-open-o" aria-hidden="true"></i>ストック一覧</a>
       </li>
       <li class="post">
         <a href="/drafts/new"><i class="fa fa-pencil" aria-hidden="true"></i>投稿する</a>
       </li>
-      <li><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></span>
+      <li><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></li>
       <li>
         <img src="/images/adwd.jpg" width="33px" height="33px">
       </li>
@@ -53,8 +53,15 @@ span {
   vertical-align: middle;
 }
 
+@media screen and (max-width: 600px) {
+  .stock, .post {
+    display: none;
+  }
+}
+
 span.qiita {
   padding: 5px;
+  margin-left: 16px;
   background-color: #55c500;
   color: white;
   font-size: 22px;

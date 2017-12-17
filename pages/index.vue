@@ -47,17 +47,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-div.container {
-  display: grid;
-  grid-template-columns: 1fr 280px minmax(auto, 600px) 280px 1fr;
-  grid-template-rows: 41px 1fr 220px;
-}
-
-header {
-  grid-row: 1 / 2;
-  grid-column: 2 / 5;
-}
-
 main,
 aside.left,
 aside.right {
@@ -65,30 +54,119 @@ aside.right {
 }
 
 div.top {
-  grid-row: 1 / 2;
-  grid-column: 1 / 6;
-
   background-color: white;
 }
 
-aside.left {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
+@media screen and (max-width: 899px) {
+  div.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 41px 1fr 220px;
+  }
+
+  header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  div.top {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  aside.left {
+    display: none;
+  }
+
+  main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  aside.right {
+    display: none;
+  }
+
+  footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
 }
 
-main {
-  grid-row: 2 / 3;
-  grid-column: 3 / 4;
+@media screen and (min-width: 900px) and (max-width: 1119px) {
+  div.container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 41px 1fr 220px;
+  }
+
+  header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+  }
+
+  div.top {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+  }
+
+  aside.left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  main {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  aside.right {
+    display: none;
+  }
+
+  footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
 }
 
-aside.right {
-  grid-row: 2 / 3;
-  grid-column: 4 / 5;
-}
+@media screen and (min-width: 1120px) {
+  div.container {
+    display: grid;
+    grid-template-columns: 1fr 280px minmax(auto, 600px) 280px 1fr;
+    grid-template-rows: 41px 1fr 220px;
+  }
 
-footer {
-  grid-row: 3 / 4;
-  grid-column: 1 / 6;
+  header {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+  }
+
+  div.top {
+    grid-row: 1 / 2;
+    grid-column: 1 / 6;
+  }
+
+  aside.left {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  main {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+  }
+
+  aside.right {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    display: block;
+  }
+
+  footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 6;
+  }
 }
 
 a.advent-calendar {
