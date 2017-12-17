@@ -96,11 +96,10 @@ a.advent-calendar {
   text-decoration: none;
   color: black;
 
-  card {
-    display: block;
+  div.card-container {
     font-size: 16px;
     font-weight: bold;
-    margin: 16px 8px;
+    padding: 16px 8px;
   }
   i.fa-heart {
     padding: 0 3px;
