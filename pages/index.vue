@@ -24,7 +24,9 @@
       <!--<div>user ranking</div>-->
       <!--<div>tag ranking</div>-->
     </aside>
-    <footer></footer>
+    <footer>
+      <app-footer></app-footer>
+    </footer>
   </div>
 </template>
 
@@ -34,6 +36,7 @@ import AppTimeLine from '~/components/TimeLine.vue'
 import AppProfileCard from '~/components/ProfileCard.vue'
 import HotTags from '~/components/HotTags.vue'
 import Card from '~/components/parts/Card.vue'
+import AppFooter from '~/components/Footer.vue'
 
 export default {
   components: {
@@ -41,7 +44,8 @@ export default {
     AppTimeLine,
     AppProfileCard,
     HotTags,
-    Card
+    Card,
+    AppFooter
   }
 }
 </script>
@@ -55,6 +59,15 @@ aside.right {
 
 div.top {
   background-color: white;
+}
+
+/*◯◯ {*/
+  /*box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;*/
+/*}*/
+
+footer {
+  background-color: white;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.35);
 }
 
 @media screen and (max-width: 899px) {
@@ -183,10 +196,5 @@ a.advent-calendar {
     padding: 0 3px;
     color: red;
   }
-}
-
-footer {
-  background-color: #bbbbbb;
-  border: 5px solid #444444;
 }
 </style>
