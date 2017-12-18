@@ -1,9 +1,11 @@
 <template>
   <div class="timeline-container">
-    <article-item v-for="(item, index) in items"
+    <article-item v-if="loaded" v-for="item in items"
         :key="item.id"
         :item="item">
     </article-item>
+    <div class="loading" v-if="!loaded">
+    </div>
   </div>
 </template>
 
@@ -17,13 +19,15 @@ export default {
   },
   data: function () {
     return {
-      items: []
+      items: [],
+      loaded: false
     }
   },
   created: function () {
     axios.get('https://qiita.com/api/v2/items')
       .then(res => {
         this.items = res.data
+        this.loaded = true
       })
   }
 }
@@ -32,5 +36,9 @@ export default {
 <style scoped>
 .article-item + .article-item {
   margin-top: 15px;
+}
+
+.loading {
+  height: 800px;
 }
 </style>
