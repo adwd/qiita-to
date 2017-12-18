@@ -50,6 +50,7 @@ export default {
 ul.links, ul.links2 {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   margin-left: auto;
   margin-right: auto;
@@ -65,7 +66,7 @@ ul.links, ul.links2 {
       text-decoration: none;
       color: black;
       font-size: 18px;
-      /*font-weight: bold;*/
+      word-break: keep-all;
     }
   }
 }
