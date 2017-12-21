@@ -27,11 +27,9 @@ export default {
         { title: 'Qiita:Team', to: 'https://teams.qiita.com' }
       ],
       links2: [
-        { title: '© 2011-2017 Increments Inc.', to: 'increments.co.jp' },
-        { title: 'Terms', to: 'https://qiita.com/terms' },
-        { title: 'プライバシー', to: 'https://qiita.com/privacy' },
-        { title: 'ヘルプ', to: 'help.qiita.com' },
-        { title: 'お問い合わせ', to: 'https://increments.zendesk.com/anonymous_requests/new' }
+        { title: 'Terms', to: '#' },
+        { title: 'プライバシー', to: '#' },
+        { title: 'ヘルプ', to: '#' }
       ]
     }
   }
