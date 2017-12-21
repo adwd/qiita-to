@@ -21,6 +21,12 @@
           &gt;
         </card>
       </a>
+      <div class="about">
+        <card>
+          <i class="fa fa-hand-o-right fa-lg" aria-hidden="true"></i>
+          本サイトはqiitaおよびdev.toと何の関係もない個人がただのCSS練習用に作ったサイトです
+        </card>
+      </div>
       <!--<div>user ranking</div>-->
       <!--<div>tag ranking</div>-->
     </aside>
@@ -178,7 +184,7 @@ footer {
   }
 }
 
-a.advent-calendar {
+a.advent-calendar, div.about {
   display: block;
   text-decoration: none;
   color: black;
@@ -191,6 +197,15 @@ a.advent-calendar {
   i.fa-heart {
     padding: 0 3px;
     color: red;
+  }
+}
+
+div.about {
+  margin-top: 12px;
+
+  .fa-hand-o-right {
+    margin-top: 4px;
+    margin-right: 6px;
   }
 }
 </style>
